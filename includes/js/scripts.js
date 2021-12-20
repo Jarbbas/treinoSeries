@@ -3,7 +3,7 @@ function convertTime(value) {
   let hours = Math.floor(sec / 3600); // get hours
   let minutes = Math.floor((sec - hours * 3600) / 60); // get minutes
   let seconds = sec - hours * 3600 - minutes * 60; //  get seconds
-  let ms = sec * 1000; //  get ms
+  let ms = sec - seconds * 1000; //  get milliseconds
 
   // add 0 if value < 10; Example: 2 => 02
   if (hours < 10) {
@@ -15,9 +15,12 @@ function convertTime(value) {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  // if (ms < 10) {ms = "0"+ms;}
-  let miliseconds = ms / 60;
-  return minutes + ":" + seconds; // Return is HH : MM : SS
+  //  if (ms < 10) {
+  //    ms = "0" + ms;
+  //   }
+  let milliseconds = Math.ceil(((Math.abs(ms))) /1000);
+  
+  return minutes + ":" + seconds + "." + milliseconds;  // Return is HH : MM : SS
 }
 
 $(document).ready(function () {
@@ -103,9 +106,9 @@ $(document).ready(function () {
     var tempo_total_atividade = numero_series * seconds_activity;
     var tempo_total_descanso = numero_series * seconds_rest;
     var tempo_total = tempo_total_atividade + tempo_total_descanso;
-    /** para a distancia total no caso do descanso ativo estabeleci 100m como uma previsão */
-    var distancia_total = numero_series * distancia + numero_series * 100;
-
+    var distancia_total = numero_series * distancia;
+    
+   
     $("#tempo_total_atividade").after(
       "<td>" + convertTime(tempo_total_atividade) + "</td>"
     );
@@ -166,7 +169,7 @@ $(document).ready(function () {
     });
     $("#track5").mouseover(function () {
       console.log(parseInt(distance) + 0.3);
-      var lane = (seconds_activity / (parseInt(distance) + 3.0)) * 1;
+      var lane = (seconds_activity / (parseInt(distance) + 3)) * 1;
       var lane100m = lane;
       var lane200m = lane * 2;
       var lane300m = lane * 3;
@@ -177,31 +180,7 @@ $(document).ready(function () {
       document.getElementById("lane400m").innerHTML = convertTime(lane400m);
     });
 
-    // switch (laneValidation) {
-    //   case 1:
-    //      lane = (seconds_activity / parseInt(distance)) * 1;
-    //     break;
-    //     case 2:
-    //        lane = (seconds_activity / (parseInt(distance) + 0.7)) * 1;
-    //       break;
-    //       case 3:
-    //          lane = (seconds_activity / (parseInt(distance) + 1.4)) * 1;
-    //         break;
-    //         case 4:
-    //            lane = (seconds_activity / (parseInt(distance) + 2.2)) * 1;
-    //           break;
-    //           case 5:
-    //              lane = (seconds_activity / (parseInt(distance) + 3.0)) * 1;
-    //             break;
-    // }
 
-    // $("#lane100m").append().text()=lane100m;
-
-    /** variaveis para pista */
-    // document.getElementById("lane100m").innerHTML = convertTime(lane100m);
-    // document.getElementById("lane200m").innerHTML = convertTime(lane200m);
-    // document.getElementById("lane300m").innerHTML = convertTime(lane300m);
-    // document.getElementById("lane400m").innerHTML = convertTime(lane400m);
   });
 
   $("#limpar").click(function () {
@@ -215,4 +194,5 @@ $(document).ready(function () {
       location.reload();
     }
   });
+  
 });
