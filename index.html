@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="includes/jquery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="includes/bootstrap/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="includes/bootstrap/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="includes/bootstrap/css/bootstrap.css" />
+    <script type="text/javascript" src="includes/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="includes/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="includes/css/stylesheet.css" />
+    <title>Treinos na Pista</title>
+</head>
+
+<body>
+    <div class="imageOneBackground">
+        <div class="titulo">
+            <span class="border">
+                Treinar Duro & Competir Fácil
+            </span>
+        </div>
+    </div>
+
+    <section id="sectionTwo" class="section section-light">
+        <h2>Treino de Séries em Pista</h2>
+    </section>
+
+    <div class="imageTwoBackgound">
+        <div class="container">
+            <div class="input-group input-group-lg mb-3" style="padding-top: 4rem;">
+                <span class="input-group-text" id="inputGroup-sizing-lg"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">#</span>
+                <input type="number" class="form-control" placeholder="Nª de Séries" aria-label="Nª de Séries" min="1"
+                    max="20" id="numero_series" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-lg"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Distâncias</span>
+                <input type="number" class="form-control" placeholder="distância em metros"
+                    aria-label="Distancia em metros" min="1" max="10000" id="distancia" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group-text sub_titulo">Parciais</div>
+
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-lg"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Actividade</span>
+                <input type="number" class="form-control" placeholder="Minutos" min="0" max="60" id="minutos_actividade"
+                    name="minutos_actividade">
+                <span class="input-group-text"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">:</span>
+                <input type="number" class="form-control" placeholder="Segundos" min="0" max="60"
+                    id="segundos_actividade" name="segundos_actividade">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-lg"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Descanso</span>
+                <input type="text" class="form-control" placeholder="Minutos" min="0" max="60" id="minutos_descanso">
+                <span class="input-group-text"
+                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">:</span>
+                <input type="text" class="form-control" placeholder="Segundos" min="0" max="60" id="segundos_descanso">
+            </div>
+
+            <button id="calcular" type="button" class="btn btn-lg"
+                style="width: 100%; background-color: #B53B39; color: antiquewhite;">Calcular</button>
+            <!-- <button id="limpar" type="button" class="btn btn-warning my-5 btn-lg" style="width: 100%;">Limpar</button> -->
+
+        </div>
+    </div>
+
+    <section id="sectionThree" class="section section-dark">
+        <p><b><i style="margin-left: -4rem; font-size: 25px;">" The Pain You Feel Today Is The Strength You Feel
+                    Tomorrow "</i></b></p>
+        <p style="margin-left: -4rem; font-size: 20px;">Stephen Richards</p>
+    </section>
+
+    <div class="pimg3">
+        <div class="container">
+            <div class="row resumo">
+                <div class="col-6">
+                    <div id="table" class="tabela">
+                        <table class="text-center my-5" style="width: 100%;">
+                            <thead>
+                                <tr class="bg-warning text-light">
+                                    <th colspan="3"><b>Tempos por volta</b></th>
+                                </tr>
+                                <tr>
+                                    <th>Segundos</th>
+                                    <th>Metros</th>
+                                    <th>Parciais</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaVoltas">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="table" class="tabela">
+                        <table class="text-center my-5" style="width: 100%;">
+                            <tr class="bg-warning text-light">
+                                <td colspan="2"><b>Resumo do Treino</b></td>
+                            </tr>
+                            <tr>
+                                <td id="tempo_total_atividade">Tempo Total Trabalho</td>
+                            </tr>
+                            <tr>
+                                <td id="tempo_total_descanso">Tempo Total Descanso</td>
+                            </tr>
+                            <tr>
+                                <td id="tempo_total">Tempo Total</td>
+                            </tr>
+                            <tr>
+                                <td id="distancia_total">Distância (m) Total</td>
+                            </tr>
+                        </table>
+                        <p>
+                            Atenção* O campo "Distancia(m) Total" leva em consideração 100m a mais por cada volta no
+                            "descanso".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section id="sectionFour" class="section section-dark">
+        <h2 style="padding-left: 3rem;">O lembrete que todos nós precisamos</h2><br><br>
+        <p><i style="font-size: 14pt;">
+            <b>“</b> We all have dreams. In order to make dreams come into reality, it takes an awful lot of determination, dedication, self-discipline, and effort. <b>”</b>
+            </i></p>
+            <p>Jesse Owens</p>
+    </section>
+
+    <div class="pimg4">
+        <div class="container">
+            <div id="track" class="trackContainer">
+                <div class="track-outer">
+                  <div id="track5" class="track track5"><span class="track-lane5">5</span></div>
+
+                  <p class="track-lane400">0/400m</p><div id="track4" class="track track4"><span class="track-lane4">4</span></div>
+                  <p class="track-lane300">300m</p><div id="track3" class="track track3"><span class="track-lane3">3</span></div> 
+                  <p class="track-lane200">200m</p><div id="track2" class="track track2"><span class="track-lane2">2</span></div>
+          
+                  <p class="track-lane100">100m</p>
+                    <div id="track1" class="track track1" >
+                      <p class="tooltipTextTop tooltipText100Lane" id="lane100m"></p>
+                      <p class="tooltipTextTop tooltipText200Lane" id="lane200m"></p>
+                      <p class="tooltipTextBottom tooltipText300Lane" id="lane300m"></p>
+                      <p class="tooltipTextBottom tooltipText400Lane" id="lane400m"></p>
+                     
+                      <span class="track-lane1">1</span>
+                    </div>
+          
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="imageOneBackground">
+        <div class="titulo">
+            <span class="border">
+                Hoje mói, Amanha mói menos
+            </span>
+            <p style="font-size: 14pt; padding-top: 4rem;">Made with Love<br> Emanuel Rodrigues</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="includes/js/scripts.js"></script>
+
+</html>

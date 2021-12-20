@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Zilla+Slab:wght@300&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #b53b39;
+}
+
+h2 {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 34px;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+#sectionTwo h2 {
+  top: 107%;
+  width: 100%;
+  left: 0.5%;
+  color: #b53b39;
+}
+
+#sectionThree h2 {
+  color: whitesmoke;
+  border: none;
+  position: relative;
+}
+
+.imageOneBackground,
+.imageTwoBackgound,
+.pimg3,
+.pimg4 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.imageOneBackground {
+  background-image: url("../../includes/images/TrackAndField.jpg");
+  min-height: 100%;
+}
+
+.imageTwoBackgound {
+  background-image: url("../../includes/images/grass.jpg");
+  min-height: 500px;
+}
+
+/* .imageTwoBackgound h2 {
+  padding: 2rem;
+  width: 100%;
+  color: antiquewhite;
+  display: inline-block;
+  text-align: center;
+  font-size: 25pt;
+  font-weight: bold;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+} */
+
+.sub_titulo {
+  width: 100%;
+  background-color: #b53b39;
+  color: antiquewhite;
+  display: inline-block;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+.pimg3 {
+  background-image: url("../../includes/img/me.jpeg");
+  min-height: 400px;
+}
+
+.pimg4 {
+  background-image: url("../../includes/img/skull2.jpg");
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4f4;
+  color: #b53b39;
+  padding-top: 5rem;
+}
+
+.section-dark {
+  background-color: #af302e;
+  color: #ddd;
+}
+
+.titulo {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+.titulo .border {
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px;
+}
+
+.imageTwoBackgound .titulo .border,
+.pimg3 .titulo .border,
+.pimg4 .titulo .border {
+  color: whitesmoke;
+}
+
+.titulo .border.transparent {
+  background-color: transparent;
+}
+
+table,
+th,
+td {
+  width: auto;
+  border: 1px solid orange;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #eece88;
+}
+
+.fade {
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.resumo {
+  opacity: 0;
+}
+
+/*Pista*/
+
+.trackContainer {
+  padding-top: 4rem;
+  opacity: 0;
+}
+
+.track-outer {
+  position: relative;
+  text-align: right;
+}
+
+.track {
+  border: 25px solid #b27569;
+  transition: all ease-in-out 200ms;
+  position: absolute;
+}
+
+.track:hover {
+  border: 25px solid #825046;
+  cursor: pointer;
+}
+
+.track-lane100 {
+  left: -36%;
+  top: -182px;
+  position: relative;
+  z-index: 1;
+}
+
+.track-lane200 {
+  left: -62%;
+  top: -136px;
+  position: relative;
+  z-index: 1;
+}
+
+.track-lane300 {
+  left: -62%;
+  top: 251px;
+  position: relative;
+  z-index: 1;
+}
+
+.track-lane400 {
+  left: -36%;
+  top: 296px;
+  position: relative;
+  z-index: 1;
+}
+
+.track1 {
+  background-color: rgb(25, 211, 25);
+  height: 112px;
+  width: 362px;
+  border-radius: 53px;
+  left: 33%;
+  top: 50%;
+}
+
+.track-lane1 {
+  left: -8.5%;
+  top: 94%;
+  position: relative;
+  color: antiquewhite;
+}
+
+.track2 {
+  height: 164px;
+  width: 414px;
+  border-radius: 78px;
+  left: 30.7%;
+  top: 34%;
+}
+
+.track-lane2 {
+  left: -14.5%;
+  top: 99%;
+  position: relative;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+.track3 {
+  height: 216px;
+  width: 466px;
+  border-radius: 102px;
+  left: 28.2%;
+  top: 18%;
+}
+
+.track-lane3 {
+  left: -18.5%;
+  top: 100%;
+  position: relative;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+.track4 {
+  height: 268px;
+  width: 518px;
+  border-radius: 127px;
+  left: 25.9%;
+  top: 2%;
+}
+
+.track-lane4 {
+  left: -22%;
+  top: 100%;
+  position: relative;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+.track5 {
+  height: 320px;
+  width: 570px;
+  border-radius: 152px;
+  left: 23.6%;
+  top: -14%;
+}
+
+.track-lane5 {
+  left: -25%;
+  top: 100%;
+  position: relative;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+/******* TOOLTIPS ****************/
+
+/** LANE1 **/
+.track-outer .tooltipTextTop {
+  visibility: hidden;
+  width: 120px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;
+  font-size: small;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.track-outer .tooltipTextBottom {
+visibility: hidden;
+width: 120px;
+background-color: orange;
+color: white;
+text-align: center;
+padding: 5px;
+border-radius: 6px;
+position: absolute;
+z-index: 100;
+font-size: small;
+opacity: 0;
+transition: opacity 1s;
+}
+
+/** LANES*/
+.tooltipText100Lane {
+  left: 72%;
+  top: -98%;
+}
+
+.tooltipText200Lane {
+  top: -98%;
+  left: -10%;
+}
+
+.tooltipText300Lane {
+  top: 122%;
+  left: -10%;
+}
+
+.tooltipText400Lane {
+left: 72%;
+top: 122%;
+
+}
+
+.track-outer:hover .tooltipTextTop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.track-outer:hover .tooltipTextBottom {
+visibility: visible;
+opacity: 1;
+}
+
+
+.track-outer:hover .tooltipTextTop::after {
+      content: ' ';
+      position: absolute;
+      top: 100%;
+      left: 45%;
+      border-width: 5px;
+      border-style: solid;
+      border-color: orange transparent transparent transparent;
+  }
+
+.track-outer:hover .tooltipTextBottom::after {
+    content: ' ';
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: orange transparent transparent transparent;
+    transform: rotate(180deg);
+}
+
