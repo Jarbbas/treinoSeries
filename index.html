@@ -19,68 +19,64 @@
     <div class="imageOneBackground">
         <div class="titulo">
             <span class="border">
-                Treinar Duro & Competir Fácil
+                Treinar Duro
+            </span>
+            <span class="border">
+                Competir Fácil
             </span>
         </div>
     </div>
 
     <section id="sectionTwo" class="section section-light">
-        <h2>Treino de Séries em Pista</h2>
+        <h2>Treino de Séries Pista</h2>
     </section>
 
     <div class="imageTwoBackgound">
         <div class="container">
             <div class="input-group input-group-lg mb-3" style="padding-top: 4rem;">
-                <span class="input-group-text" id="inputGroup-sizing-lg"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">#</span>
+                <span class="input-group-text tabelaLegendas" id="inputGroup-sizing-lg">#</span>
                 <input type="number" class="form-control" placeholder="Nª de Séries" aria-label="Nª de Séries" min="1"
                     max="20" id="numero_series" aria-describedby="basic-addon1">
             </div>
             <div class="input-group input-group-lg mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-lg"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Distâncias</span>
-                <input type="number" class="form-control" placeholder="distância em metros"
+                <span class="input-group-text tabelaLegendas" id="inputGroup-sizing-lg">Distância</span>
+                <input type="number" class="form-control" placeholder="Metros"
                     aria-label="Distancia em metros" min="1" max="10000" id="distancia" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group-text sub_titulo">Parciais</div>
 
             <div class="input-group input-group-lg mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-lg"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Actividade</span>
+                <span class="input-group-text tabelaLegendas" id="inputGroup-sizing-lg">Serie</span>
                 <input type="number" class="form-control" placeholder="Minutos" min="0" max="60" id="minutos_actividade"
                     name="minutos_actividade">
-                <span class="input-group-text"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">:</span>
+                <span class="input-group-text tabelaLegendas tableDots">:</span>
                 <input type="number" class="form-control" placeholder="Segundos" min="0" max="60"
                     id="segundos_actividade" name="segundos_actividade">
             </div>
             <div class="input-group input-group-lg mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-lg"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">Descanso</span>
+                <span class="input-group-text tabelaLegendas" id="inputGroup-sizing-lg">Descanso</span>
                 <input type="text" class="form-control" placeholder="Minutos" min="0" max="60" id="minutos_descanso">
-                <span class="input-group-text"
-                    style="background-color: #B53B39; color: antiquewhite; font-size: 25px; font-weight: bold;">:</span>
+                <span class="input-group-text tabelaLegendas tableDots">:</span>
                 <input type="text" class="form-control" placeholder="Segundos" min="0" max="60" id="segundos_descanso">
             </div>
 
-            <button id="calcular" type="button" class="btn btn-lg"
-                style="width: 100%; background-color: #B53B39; color: antiquewhite;">Calcular</button>
+            <button id="calcular" type="button" class="btn btn-lg butao">Calcular</button>
             <!-- <button id="limpar" type="button" class="btn btn-warning my-5 btn-lg" style="width: 100%;">Limpar</button> -->
 
         </div>
     </div>
 
     <section id="sectionThree" class="section section-dark">
-        <p><b><i style="margin-left: -4rem; font-size: 25px;">" The Pain You Feel Today Is The Strength You Feel
+        <p class="tituloDark"><b><i>" The Pain You Feel Today Is The Strength You Feel
                     Tomorrow "</i></b></p>
-        <p style="margin-left: -4rem; font-size: 20px;">Stephen Richards</p>
+        <p>Stephen Richards</p>
     </section>
 
     <div class="pimg3">
         <div class="container">
             <div class="row resumo">
-                <div class="col-6">
+                <div class="col-sm-2 col-sm-6 grid-margin mb-sm-2">
                     <div id="table" class="tabela">
                         <table class="text-center my-5" style="width: 100%;">
                             <thead>
@@ -99,7 +95,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-2 col-sm-6 grid-margin mb-sm-2">
                     <div id="table" class="tabela">
                         <table class="text-center my-5" style="width: 100%;">
                             <tr class="bg-warning text-light">
@@ -127,15 +123,14 @@
 
     <section class="section section-dark">
         <div class="container">
-        <h2 style="padding-left: 3rem;">O lembrete que todos nós precisamos</h2><br><br>
-        <p><i style="font-size: 14pt;">
+            <p><i style="font-size: 14pt;">
             <b>“</b> We all have dreams. In order to make dreams come into reality, it takes an awful lot of determination, dedication, self-discipline, and effort. <b>”</b>
             </i></p>
             <p>Jesse Owens</p>
         </div>
     </section>
 
-    <div class="pimg4">
+    <div id="track" class="pimg4">
         <div class="container">
             <div id="track" class="trackContainer">
                 <div class="track-outer">
