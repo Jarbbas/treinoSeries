@@ -3,7 +3,7 @@ function convertTime(value) {
   let hours = Math.floor(sec / 3600); // get hours
   let minutes = Math.floor((sec - hours * 3600) / 60); // get minutes
   let seconds = sec - hours * 3600 - minutes * 60; //  get seconds
-  let ms = sec - seconds * 1000; //  get milliseconds
+  //let ms = sec - seconds * 1000; //  get milliseconds
 
   // add 0 if value < 10; Example: 2 => 02
   if (hours < 10) {
@@ -18,9 +18,11 @@ function convertTime(value) {
   //  if (ms < 10) {
   //    ms = "0" + ms;
   //   }
-  let milliseconds = Math.ceil(((Math.abs(ms))) /1000);
+  //let milliseconds = Math.ceil(((Math.abs(ms))) /1000);
   
-  return minutes + ":" + seconds + "." + milliseconds;  // Return is HH : MM : SS
+  // return minutes + ":" + seconds + "." + milliseconds;  // Return is HH : MM : SS
+  return minutes + ":" + seconds;  // Return is HH : MM 
+
 }
 
 $(document).ready(function () {
@@ -30,7 +32,7 @@ $(document).ready(function () {
     calculos = true;
     $("html, body").animate(
       { scrollTop: $("#sectionThree").offset().top },
-      1500
+      1700
     );
 
     var minutos_actividade = $("#minutos_actividade").val();
