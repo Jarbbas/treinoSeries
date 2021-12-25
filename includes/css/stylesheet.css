@@ -407,13 +407,17 @@ tr:nth-child(even) {
     letter-spacing: 3px;
   }
 
+  .titulo{
+    font-size: 64pt;
+  }
+
   .titulo .border {
     padding  : 3px;
     font-size: 25pt;
   }
 
   #sectionTwo h2 {
-    top  : 106%;
+    top  : 105%;
     width: 100%;
     left : 0.5%;
   }
