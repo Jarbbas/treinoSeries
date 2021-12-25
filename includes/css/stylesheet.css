@@ -399,6 +399,7 @@ tr:nth-child(even) {
   h2 {
     font-size     : 22pt;
     letter-spacing: 3px;
+    padding-bottom: 2rem;
   }
 
   span {
@@ -412,7 +413,7 @@ tr:nth-child(even) {
   }
 
   #sectionTwo h2 {
-    top  : 104%;
+    top  : 106%;
     width: 100%;
     left : 0.5%;
   }
